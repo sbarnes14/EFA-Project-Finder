@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectFinder.Models
 {
-    class StudentCreate
+    public class StudentCreate
     {
     }
 }

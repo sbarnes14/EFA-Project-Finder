@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectFinder.Services
+namespace ProjectFinder.Models.Student
 {
-    public class StudentService
+    public class StudentListItem
     {
     }
 }
