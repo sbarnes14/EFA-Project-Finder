@@ -75,5 +75,24 @@ namespace ProjectFinder.Services
                     };
             }
         }
+
+        public bool UpdateCourse(CourseEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Courses
+                    .Single(e => e.CourseId == model.CourseId && e.OwnerId == _userId);
+
+                entity.Cohort = model.Cohort;
+                entity.CourseType = model.CourseType;
+                entity.Students = model.Students;
+                entity.StartDate = model.StartDate;
+                entity.EndDate = model.EndDate;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

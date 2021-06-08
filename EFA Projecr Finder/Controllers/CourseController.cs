@@ -47,6 +47,19 @@ namespace EFA_Projecr_Finder.Controllers
             var courseService = new CourseService(userId);
             return courseService;
         }
+
+        private IHttpActionResult Put(CourseEdit course)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateCourseService();
+
+            if (!service.UpdateCourse(course))
+                return InternalServerError();
+
+            return Ok();
+        }
     }
 
 }
