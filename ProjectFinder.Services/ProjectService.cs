@@ -22,6 +22,7 @@ namespace ProjectFinder.Services
             var entity =
                 new Project()
                 {
+                    OwnerId = _userId,
                     ProjectName = model.Projectname,
                     ProjectDescription = model.ProjectDescription,
                     StartDate = DateTimeOffset.Now,
@@ -51,6 +52,53 @@ namespace ProjectFinder.Services
                                         }
                     );
                 return query.ToArray();
+            }
+        }
+        public ProjectDetail GetProjectById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Projects
+                        .Single(e => e.ProjectId == id && e.OwnerId == _userId);
+                return
+                    new ProjectDetail
+                    {
+                        ProjectId = entity.ProjectId,
+                        ProjectName = entity.ProjectName,
+                        ProjectDescription = entity.ProjectDescription,
+                        CreatedUtc = entity.StartDate,
+                        ModfiedUtc = entity.EndDate
+                    };
+            }
+        }
+        public bool UpdateProject(ProjectEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Projects
+                        .Single(e => e.ProjectId == model.ProjectId && e.OwnerId == _userId);
+                entity.ProjectName = model.ProjectName;
+                entity.ProjectDescription = model.ProjectDescription;
+                entity.StartDate = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public bool DeleteProject(int projectId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Projects
+                        .Single(e => e.ProjectId == projectId && e.OwnerId == _userId);
+                ctx.Projects.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }
