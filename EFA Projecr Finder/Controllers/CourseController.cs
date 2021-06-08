@@ -48,7 +48,7 @@ namespace EFA_Projecr_Finder.Controllers
             return courseService;
         }
 
-        private IHttpActionResult Put(CourseEdit course)
+        public IHttpActionResult Put(CourseEdit course)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
