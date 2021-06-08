@@ -22,6 +22,16 @@ namespace ProjectFinder.Data
         public string GithubProfile { get; set; }
 
         [Required]
-        public DateTime EnrollDate { get; set; }
+        public DateTimeOffset EnrollDate { get; set; }
+
+        //[Required]
+        //public int ProjectId { get; set; }
+
+        //[ForeignKey(nameof(Project))]
+        //public virtual Project Project { get; set; }
+
+        //[ForeignKey(nameof(Course))]
+        //public int CourseId { get; set; }
+        //public virtual Course Course { get; set; }
     }
 }
