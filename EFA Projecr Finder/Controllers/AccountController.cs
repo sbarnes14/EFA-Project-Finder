@@ -16,6 +16,7 @@ using Microsoft.Owin.Security.OAuth;
 using EFA_Projecr_Finder.Models;
 using EFA_Projecr_Finder.Providers;
 using EFA_Projecr_Finder.Results;
+using EFA_Project_Finder;
 
 namespace EFA_Projecr_Finder.Controllers
 {

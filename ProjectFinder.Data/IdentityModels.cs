@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using ProjectFinder.Data;
 
 namespace EFA_Project_Finder
 {
@@ -32,6 +33,7 @@ namespace EFA_Project_Finder
         {
             return new ApplicationDbContext();
         }
+
         public DbSet<Project> Projects { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

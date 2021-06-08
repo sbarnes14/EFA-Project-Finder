@@ -54,6 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Project\ProjectCreate.cs" />
+    <Compile Include="Project\ProjectDetail.cs" />
+    <Compile Include="Project\ProjectEdit.cs" />
+    <Compile Include="Project\ProjectListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
