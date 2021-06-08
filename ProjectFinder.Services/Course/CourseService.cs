@@ -54,5 +54,26 @@ namespace ProjectFinder.Services
                 return query.ToArray();
             }
         }
+
+        public CourseDetail GetCourseById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Courses
+                    .Single(e => e.CourseId == id && e.OwnerId == _userId);
+                return
+                    new CourseDetail
+                    {
+                        CourseId = entity.CourseId,
+                        Cohort = entity.Cohort,
+                        CourseType = entity.CourseType,
+                        Students = entity.Students,
+                        StartDate = entity.StartDate,
+                        EndDate = entity.EndDate
+                    };
+            }
+        }
     }
 }

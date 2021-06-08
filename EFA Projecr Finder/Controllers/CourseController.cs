@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using ProjectFinder.Data;
 using ProjectFinder.Models.Course;
 using ProjectFinder.Services;
 using System;
@@ -18,6 +19,13 @@ namespace EFA_Projecr_Finder.Controllers
             CourseService courseService = CreateCourseService();
             var courses = courseService.GetCourses();
             return Ok(courses);
+        }
+
+        public IHttpActionResult Get(int id)
+        {
+            CourseService courseService = CreateCourseService();
+            var course = courseService.GetCourseById(id);
+            return Ok(course);
         }
 
         public IHttpActionResult Post(CourseCreate course)
