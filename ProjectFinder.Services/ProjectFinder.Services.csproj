@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Course\CourseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectFinder.Data\ProjectFinder.Data.csproj">
+      <Project>{ee4d5429-85ba-4094-aa82-6a14b097bd9c}</Project>
+      <Name>ProjectFinder.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectFinder.Models\ProjectFinder.Models.csproj">
+      <Project>{49E5D81A-055C-4F6E-9F11-90ACC81CB58F}</Project>
+      <Name>ProjectFinder.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
