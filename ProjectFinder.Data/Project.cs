@@ -39,8 +39,8 @@ namespace ProjectFinder.Data
         public DateTimeOffset StartDate { get; set; }
         public DateTimeOffset EndDate { get; set; }
 
-        //public ICollection<Student> Students { get; set; }
+        //public IEnumerable<Student> Students { get; set; }
 
-        //public ICollection<Course> Courses { get; set; }
+        //public IEnumerable<Course> Courses { get; set; }
     }
 }
