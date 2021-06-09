@@ -48,7 +48,6 @@ namespace ProjectFinder.Services
                                         {
                                             ProjectId = e.ProjectId,
                                             ProjectName = e.ProjectName
-                                            
                                         }
                     );
                 return query.ToArray();
