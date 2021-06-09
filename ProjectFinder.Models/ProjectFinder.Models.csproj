@@ -78,6 +78,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Course\CourseCreate.cs" />
+    <Compile Include="Course\CourseDetail.cs" />
+    <Compile Include="Course\CourseEdit.cs" />
+    <Compile Include="Course\CourseList.cs" />
+    <Compile Include="Project\ProjectCreate.cs" />
+    <Compile Include="Project\ProjectDetail.cs" />
+    <Compile Include="Project\ProjectEdit.cs" />
+    <Compile Include="Project\ProjectListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student\StudentCreate.cs" />
     <Compile Include="Student\StudentListItem.cs" />

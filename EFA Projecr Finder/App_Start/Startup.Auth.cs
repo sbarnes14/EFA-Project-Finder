@@ -10,6 +10,7 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using EFA_Projecr_Finder.Providers;
 using EFA_Projecr_Finder.Models;
+using EFA_Project_Finder;
 
 namespace EFA_Projecr_Finder
 {
