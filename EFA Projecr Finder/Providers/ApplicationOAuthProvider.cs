@@ -11,6 +11,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using EFA_Projecr_Finder.Models;
 using EFA_Project_Finder;
+using EFA_Project_Finder.Data;
 
 namespace EFA_Projecr_Finder.Providers
 {
