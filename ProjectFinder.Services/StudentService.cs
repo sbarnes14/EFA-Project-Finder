@@ -12,9 +12,9 @@ namespace ProjectFinder.Services
 {
     public class StudentService
     {
-        private readonly Guid _userId;
+        private readonly int _userId;
 
-        public StudentService(Guid userId)
+        public StudentService(int userId)
         {
             _userId = userId;
         }
@@ -44,7 +44,7 @@ namespace ProjectFinder.Services
                 var query =
                     ctx
                         .Students
-                        .Where(e => e.OwnerId == _userId)//not sure of this
+                        .Where(e => e.StudentId == _userId)//not sure of this
                         .Select(
                             e =>
                                 new StudentListItem

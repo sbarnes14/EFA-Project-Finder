@@ -33,7 +33,8 @@ namespace EFA_Project_Finder.Data
         {
             return new ApplicationDbContext();
         }
-        //public DbSet<Project> Projects { get; set; }
+
+        public DbSet<Project> Projects { get; set; }
         public DbSet<Student> Students { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
