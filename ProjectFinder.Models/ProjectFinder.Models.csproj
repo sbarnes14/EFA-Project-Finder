@@ -58,6 +58,10 @@
     <Compile Include="Course\CourseDetail.cs" />
     <Compile Include="Course\CourseEdit.cs" />
     <Compile Include="Course\CourseList.cs" />
+    <Compile Include="Project\ProjectCreate.cs" />
+    <Compile Include="Project\ProjectDetail.cs" />
+    <Compile Include="Project\ProjectEdit.cs" />
+    <Compile Include="Project\ProjectListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
