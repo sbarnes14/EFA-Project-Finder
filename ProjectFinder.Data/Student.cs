@@ -27,10 +27,10 @@ namespace ProjectFinder.Data
         //[Required]
         //public int ProjectId { get; set; }
 
-        //[ForeignKey(nameof(Project))]
+        //[ForeignKey("Project")]
         //public virtual Project Project { get; set; }
 
-        //[ForeignKey(nameof(Course))]
+        //[ForeignKey("Course")]
         //public int CourseId { get; set; }
         //public virtual Course Course { get; set; }
     }

@@ -1,6 +1,7 @@
 ﻿using EFA_Project_Finder.Data;
 using ProjectFinder.Data;
 using ProjectFinder.Models;
+using ProjectFinder.Models.Student;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,28 @@ namespace ProjectFinder.Services
             {
                 ctx.Students.Add(entity);
                 return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public IEnumerable<StudentListItem> GetStudents()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Students
+                        .Where(e => e.StudentId)//not sure of this
+                        .Select(
+                            e =>
+                                new StudentListItem
+                                {
+                                    StudentId = e.StudentId,
+                                    FirstName = e.FirstName,
+                                    LastName = e.LastName,
+                                    EnrollDate = e.EnrollDate
+                                }
+                        );
+                return query.ToArray();
             }
         }
     }
