@@ -1,4 +1,5 @@
-﻿using ProjectFinder.Models;
+﻿using Microsoft.AspNet.Identity;
+using ProjectFinder.Models;
 using ProjectFinder.Services;
 using System;
 using System.Collections.Generic;
@@ -14,15 +15,15 @@ namespace EFA_Projecr_Finder.Controllers
     {
         private StudentService CreateStudentService()
         {
-            var StudentId = Parse(ApplicationUserManager.Identity.GetStudentId());
-            var StudentService = new StudentService(StudentId);
+            var StudentId = Guid.Parse(User.Identity.GetUserId());
+            var StudentService = new StudentService(userId);
             return StudentService;
         }
 
         public IHttpActionResult Get()
         {
             StudentService studentService = CreateStudentService();
-            var students = StudentService.GetStudents();
+            var students = studentService.GetStudents();
             return Ok(students);
         }
 

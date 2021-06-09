@@ -12,6 +12,13 @@ namespace ProjectFinder.Services
 {
     public class StudentService
     {
+        private readonly Guid _userId;
+
+        public StudentService(Guid userId)
+        {
+            _userId = userId;
+        }
+
         public bool CreateStudent(StudentCreate model)
         {
             var entity =
@@ -37,7 +44,7 @@ namespace ProjectFinder.Services
                 var query =
                     ctx
                         .Students
-                        .Where(e => e.StudentId)//not sure of this
+                        .Where(e => e.OwnerId == _userId)//not sure of this
                         .Select(
                             e =>
                                 new StudentListItem
