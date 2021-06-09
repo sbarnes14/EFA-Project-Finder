@@ -5,7 +5,7 @@ namespace ProjectFinder.Data.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<EFA_Project_Finder.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<EFA_Project_Finder.Data.ApplicationDbContext>
     {
         public Configuration()
         {
@@ -13,7 +13,7 @@ namespace ProjectFinder.Data.Migrations
             ContextKey = "EFA_Project_Finder.ApplicationDbContext";
         }
 
-        protected override void Seed(EFA_Project_Finder.ApplicationDbContext context)
+        protected override void Seed(EFA_Project_Finder.Data.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
