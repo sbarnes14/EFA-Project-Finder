@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Course\CourseService.cs" />
     <Compile Include="ProjectService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -67,6 +68,7 @@
       <Name>ProjectFinder.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\ProjectFinder.Models\ProjectFinder.Models.csproj">
+      <Project>{49E5D81A-055C-4F6E-9F11-90ACC81CB58F}</Project>
       <Project>{49e5d81a-055c-4f6e-9f11-90acc81cb58f}</Project>
       <Name>ProjectFinder.Models</Name>
     </ProjectReference>
