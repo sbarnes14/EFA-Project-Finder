@@ -1,4 +1,5 @@
-﻿using ProjectFinder.Data;
+﻿using EFA_Project_Finder.Data;
+using ProjectFinder.Data;
 using ProjectFinder.Models.Course;
 using System;
 using System.Collections.Generic;
@@ -69,7 +70,7 @@ namespace ProjectFinder.Services
                         CourseId = entity.CourseId,
                         Cohort = entity.Cohort,
                         CourseType = entity.CourseType,
-                        Students = entity.Students,
+                        Students = (IEnumerable<Models.Student.StudentListItem>)entity.Students,
                         StartDate = entity.StartDate,
                         EndDate = entity.EndDate
                     };
@@ -87,7 +88,7 @@ namespace ProjectFinder.Services
 
                 entity.Cohort = model.Cohort;
                 entity.CourseType = model.CourseType;
-                entity.Students = model.Students;
+                entity.Students = (IEnumerable<Student>)model.Students;
                 entity.StartDate = model.StartDate;
                 entity.EndDate = model.EndDate;
 
