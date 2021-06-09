@@ -89,6 +89,23 @@
   <ItemGroup>
     <Compile Include="Course.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202106081418447_InitialCreate.cs" />
+    <Compile Include="Migrations\202106081418447_InitialCreate.Designer.cs">
+      <DependentUpon>202106081418447_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106091407155_Initial migraion.cs" />
+    <Compile Include="Migrations\202106091407155_Initial migraion.Designer.cs">
+      <DependentUpon>202106091407155_Initial migraion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106091423442_Commented course and student temporarily.cs" />
+    <Compile Include="Migrations\202106091423442_Commented course and student temporarily.Designer.cs">
+      <DependentUpon>202106091423442_Commented course and student temporarily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106091428578_Comented out Github Repo temporarily.cs" />
+    <Compile Include="Migrations\202106091428578_Comented out Github Repo temporarily.Designer.cs">
+      <DependentUpon>202106091428578_Comented out Github Repo temporarily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
@@ -96,6 +113,20 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202106081418447_InitialCreate.resx">
+      <DependentUpon>202106081418447_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106091407155_Initial migraion.resx">
+      <DependentUpon>202106091407155_Initial migraion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106091423442_Commented course and student temporarily.resx">
+      <DependentUpon>202106091423442_Commented course and student temporarily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106091428578_Comented out Github Repo temporarily.resx">
+      <DependentUpon>202106091428578_Comented out Github Repo temporarily.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

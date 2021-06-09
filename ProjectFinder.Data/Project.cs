@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,17 +26,21 @@ namespace ProjectFinder.Data
         [Required]
         public string ProjectDescription { get; set; }
 
-        [Required]
-        public int Students { get; set; }
+        //[Required]
+        //public int Student { get; set; }
 
-        [Required]
-        public int CourseId { get; set; }
+        //[Required]
+        //public int CourseId { get; set; }
 
-        [Required]
-        public string GitHubRepo { get; set; }
+        //[Required]
+        //public string GitHubRepo { get; set; }
 
         [Required]
         public DateTimeOffset StartDate { get; set; }
         public DateTimeOffset EndDate { get; set; }
+
+        //public ICollection<Student> Students { get; set; }
+
+        //public ICollection<Course> Courses { get; set; }
     }
 }

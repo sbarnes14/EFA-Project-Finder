@@ -37,6 +37,32 @@ namespace EFA_Projecr_Finder.Controllers
             var projectService = new ProjectService(userId);
             return projectService;
         }
+        public IHttpActionResult Get(int id)
+        {
+            ProjectService projectService = CreateProjectService();
+            var project = projectService.GetProjectById(id);
+            return Ok(project);
+        }
+        public IHttpActionResult Put(ProjectEdit project)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
+            var service = CreateProjectService();
+
+            if (!service.UpdateProject(project))
+                return InternalServerError();
+
+            return Ok();
+        }
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateProjectService();
+
+            if (!service.DeleteProject(id))
+                return InternalServerError();
+
+            return Ok();
+        }
     }
 }
