@@ -14,7 +14,7 @@ namespace ProjectFinder.Models.Course
         public string Cohort { get; set; }
         public CourseType CourseType { get; set; }
         [Display(Name = "Students")] // redundant because same name
-        public ICollection<Student> Students { get; set; } // many-to-one ref from Student Class - not implemented as of yet ~Jay
+        public virtual IEnumerable<Student> Students { get; set; } // many-to-one ref from Student Class - not implemented as of yet ~Jay
         [Display(Name = "Start Date [UTC]")]
         public DateTimeOffset StartDate { get; set; }
         [Display(Name = "End Date [UTC]")]
