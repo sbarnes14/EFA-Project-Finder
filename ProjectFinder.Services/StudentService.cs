@@ -12,6 +12,7 @@ namespace ProjectFinder.Services
 {
     public class StudentService
     {
+
        // private readonly int _userId;
 
         //public StudentService(int userId)
@@ -24,7 +25,6 @@ namespace ProjectFinder.Services
             var entity =
                 new Student()
                 {
-
                     StudentId = model.StudentId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,

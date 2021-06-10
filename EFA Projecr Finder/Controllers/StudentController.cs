@@ -17,8 +17,8 @@ namespace EFA_Projecr_Finder.Controllers
 
         //private StudentService CreateStudentService()
         //{
-        //    var studentId = User.Identity.GetUserId();
-        //    var studentService = new StudentService(Convert.ToInt32(studentId));
+        //    int studentId = User.Identity.GetStudentId);
+        //    var studentService = new StudentService(studentId);
         //    return studentService;
         //}
 

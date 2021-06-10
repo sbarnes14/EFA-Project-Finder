@@ -24,6 +24,10 @@ namespace ProjectFinder.Data
         //[Required]
         public DateTime EnrollDate { get; set; }
 
+        //public virtual List<Project> Projects { get; set; }
+
+
+
         //[Required]
         //public int ProjectId { get; set; }
 
