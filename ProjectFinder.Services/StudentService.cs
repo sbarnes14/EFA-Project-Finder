@@ -52,7 +52,7 @@ namespace ProjectFinder.Services
                                     StudentId = e.StudentId,
                                     FirstName = e.FirstName,
                                     LastName = e.LastName,
-                                    //EnrollDate = e.EnrollDate
+                                    EnrollDate = e.EnrollDate
                                 }
                         );
                 return query.ToArray();
