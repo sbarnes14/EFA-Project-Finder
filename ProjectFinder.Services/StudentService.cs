@@ -12,7 +12,8 @@ namespace ProjectFinder.Services
 {
     public class StudentService
     {
-        //private readonly int _userId;
+
+       // private readonly int _userId;
 
         //public StudentService(int userId)
         //{
@@ -24,10 +25,10 @@ namespace ProjectFinder.Services
             var entity =
                 new Student()
                 {
-                    //StudentId = _userId,
+                    StudentId = model.StudentId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
-                    EnrollDate = DateTimeOffset.Now
+                    EnrollDate = DateTime.UtcNow
                 };
 
             using (var ctx = new ApplicationDbContext())

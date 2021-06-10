@@ -108,6 +108,25 @@
     <Compile Include="Migrations\202106101642402_AddedStudent.cs" />
     <Compile Include="Migrations\202106101642402_AddedStudent.designer.cs">
       <DependentUpon>202106101642402_AddedStudent.cs</DependentUpon>
+    <Compile Include="Migrations\202106091903200_Added Course and Student Branches.cs" />
+    <Compile Include="Migrations\202106091903200_Added Course and Student Branches.designer.cs">
+      <DependentUpon>202106091903200_Added Course and Student Branches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106101717460_Commenting lines for testing.cs" />
+    <Compile Include="Migrations\202106101717460_Commenting lines for testing.designer.cs">
+      <DependentUpon>202106101717460_Commenting lines for testing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106101730040_ Change Datetime offset to datetime.cs" />
+    <Compile Include="Migrations\202106101730040_ Change Datetime offset to datetime.designer.cs">
+      <DependentUpon>202106101730040_ Change Datetime offset to datetime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106101738493_Made enrolldate not required.cs" />
+    <Compile Include="Migrations\202106101738493_Made enrolldate not required.designer.cs">
+      <DependentUpon>202106101738493_Made enrolldate not required.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106101754513_Edit StudentListItem In get students.cs" />
+    <Compile Include="Migrations\202106101754513_Edit StudentListItem In get students.designer.cs">
+      <DependentUpon>202106101754513_Edit StudentListItem In get students.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Project.cs" />
@@ -133,6 +152,20 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106101642402_AddedStudent.resx">
       <DependentUpon>202106101642402_AddedStudent.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106091903200_Added Course and Student Branches.resx">
+      <DependentUpon>202106091903200_Added Course and Student Branches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106101717460_Commenting lines for testing.resx">
+      <DependentUpon>202106101717460_Commenting lines for testing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106101730040_ Change Datetime offset to datetime.resx">
+      <DependentUpon>202106101730040_ Change Datetime offset to datetime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106101738493_Made enrolldate not required.resx">
+      <DependentUpon>202106101738493_Made enrolldate not required.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106101754513_Edit StudentListItem In get students.resx">
+      <DependentUpon>202106101754513_Edit StudentListItem In get students.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
