@@ -13,17 +13,19 @@ namespace EFA_Projecr_Finder.Controllers
     [Authorize]
     public class StudentController : ApiController
     {
-        private StudentService CreateStudentService()
-        {
-            var StudentId = User.Identity.GetUserId();
-            var StudentService = new StudentService(Convert.ToInt32(StudentId));
-            return StudentService;
-        }
+        private StudentService _studentService = new StudentService();
+
+        //private StudentService CreateStudentService()
+        //{
+        //    var studentId = User.Identity.GetUserId();
+        //    var studentService = new StudentService(Convert.ToInt32(studentId));
+        //    return studentService;
+        //}
 
         public IHttpActionResult Get()
         {
-            StudentService studentService = CreateStudentService();
-            var students = studentService.GetStudents();
+            //StudentService studentService = CreateStudentService();
+            var students = _studentService.GetStudents();
             return Ok(students);
         }
 
@@ -32,9 +34,9 @@ namespace EFA_Projecr_Finder.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var service = CreateStudentService();
+            //var service = CreateStudentService();
 
-            if (!service.CreateStudent(student))
+            if (!_studentService.CreateStudent(student))
                 return InternalServerError();
 
             return Ok();

@@ -27,13 +27,11 @@ namespace ProjectFinder.Data
         [Required]
         [Display(Name = "Course Type")]
         public CourseType CourseType { get; set; }
-        [Required]
+
         [Display(Name ="Students")] // redundant because same name
         public virtual IEnumerable<Student> Students { get; set; } // many-to-one ref from Student Class - not implemented as of yet ~Jay
-        [Required]
         [Display(Name ="Start Date [UTC]")]
         public DateTimeOffset StartDate { get; set; }
-        [Required]
         [Display(Name ="End Date [UTC]")]
         public DateTimeOffset EndDate { get; set; }
     }

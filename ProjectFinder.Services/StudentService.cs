@@ -12,22 +12,23 @@ namespace ProjectFinder.Services
 {
     public class StudentService
     {
-        private readonly int _userId;
+       // private readonly int _userId;
 
-        public StudentService(int userId)
-        {
-            _userId = userId;
-        }
+        //public StudentService(int userId)
+        //{
+        //    _userId = userId;
+        //}
 
         public bool CreateStudent(StudentCreate model)
         {
             var entity =
                 new Student()
                 {
+
                     StudentId = model.StudentId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
-                    EnrollDate = DateTimeOffset.Now
+                    EnrollDate = DateTime.UtcNow
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -44,7 +45,7 @@ namespace ProjectFinder.Services
                 var query =
                     ctx
                         .Students
-                        .Where(e => e.StudentId == _userId)//not sure of this
+                        //.Where(e => e.StudentId == _userId)//not sure of this
                         .Select(
                             e =>
                                 new StudentListItem
