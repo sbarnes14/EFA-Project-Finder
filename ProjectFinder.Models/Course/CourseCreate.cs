@@ -14,9 +14,7 @@ namespace ProjectFinder.Models.Course
         [MinLength(2, ErrorMessage ="Cohort must be at least 2 characters.")] // Min length here
         [MaxLength(20, ErrorMessage ="Cohort must be no more than 20 characters.")] // Max length here
         public string Cohort { get; set; }
-        [Required]
         public CourseType CourseType { get; set; }
-        [Required]
         public DateTimeOffset StartDate { get; set; }
     }
 }
