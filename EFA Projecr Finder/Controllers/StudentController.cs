@@ -29,6 +29,13 @@ namespace EFA_Projecr_Finder.Controllers
             return Ok(students);
         }
 
+        public IHttpActionResult Get(int id)
+        {
+            //StudentService studentService = CreateStudentService();
+            var student = _studentService.GetStudentById(id);
+            return Ok(student);
+        }
+
         public IHttpActionResult Post(StudentCreate student)
         {
             if (!ModelState.IsValid)

@@ -109,6 +109,10 @@
     <Compile Include="Migrations\202106101642402_AddedStudent.designer.cs">
       <DependentUpon>202106101642402_AddedStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106141412521_idk, just trying to fix an error...cs" />
+    <Compile Include="Migrations\202106141412521_idk, just trying to fix an error...designer.cs">
+      <DependentUpon>202106141412521_idk, just trying to fix an error...cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106101642402_AddedStudent.resx">
       <DependentUpon>202106101642402_AddedStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106141412521_idk, just trying to fix an error...resx">
+      <DependentUpon>202106141412521_idk, just trying to fix an error...cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

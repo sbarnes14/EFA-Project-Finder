@@ -58,5 +58,27 @@ namespace ProjectFinder.Services
                 return query.ToArray();
             }
         }
+
+        public StudentDetail GetStudentById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Students
+                        .Single(
+                            e => e.StudentId == id);
+                return
+                                new StudentDetail
+                                {
+                                    StudentId = query.StudentId,
+                                    FirstName = query.FirstName,
+                                    LastName = query.LastName,
+                                    GithubProfile = query.GithubProfile,
+                                    EnrollDate = query.EnrollDate,
+                                    Projects = (IEnumerable<Models.ProjectListItem>)query.Projects
+                                };                  
+            }
+        }
     }
 }
