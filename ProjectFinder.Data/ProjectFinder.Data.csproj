@@ -101,6 +101,10 @@
     <Compile Include="Migrations\202106151844319_Third Migration.designer.cs">
       <DependentUpon>202106151844319_Third Migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106152020143_Forthebois.cs" />
+    <Compile Include="Migrations\202106152020143_Forthebois.designer.cs">
+      <DependentUpon>202106152020143_Forthebois.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106151844319_Third Migration.resx">
       <DependentUpon>202106151844319_Third Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106152020143_Forthebois.resx">
+      <DependentUpon>202106152020143_Forthebois.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

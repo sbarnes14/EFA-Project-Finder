@@ -27,7 +27,7 @@ namespace ProjectFinder.Data
         [Required]
         [Display(Name = "Course Type")]
         public CourseType CourseType { get; set; }
-        public virtual IEnumerable<Student> Students { get; set; }
+        public virtual ICollection<Student> Students { get; set; }
         [Display(Name ="Start Date [UTC]")]
         public DateTimeOffset StartDate { get; set; }
         [Display(Name ="End Date [UTC]")]

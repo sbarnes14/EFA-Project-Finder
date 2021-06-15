@@ -21,9 +21,9 @@ namespace ProjectFinder.Models
         [Display(Name="Modified")]
         public DateTimeOffset ModfiedUtc { get; set; }
 
-        public IEnumerable<StudentListItem> Students { get; set; }
+        public IEnumerable<StudentDetail> Students { get; set; }
 
-        public IEnumerable<CourseList> Courses { get; set; }
+        public IEnumerable<CourseDetail> Courses { get; set; }
 
     }
 }

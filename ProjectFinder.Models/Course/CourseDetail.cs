@@ -1,4 +1,5 @@
 ﻿using ProjectFinder.Data;
+using ProjectFinder.Models.Student;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -14,7 +15,7 @@ namespace ProjectFinder.Models.Course
         public int CourseId { get; set; }
         public string Cohort { get; set; }
         public CourseType CourseType { get; set; }
-        //public virtual IEnumerable<Student> Students { get; set; }
+        public virtual IEnumerable<StudentDetail> Students { get; set; }
         [Display(Name = "Start Date [UTC]")]
         public DateTimeOffset StartDate { get; set; }
         [Display(Name = "End Date [UTC]")]

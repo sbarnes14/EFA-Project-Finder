@@ -2,6 +2,8 @@
 using EFA_Project_Finder.Data;
 using ProjectFinder.Data;
 using ProjectFinder.Models;
+using ProjectFinder.Models.Course;
+using ProjectFinder.Models.Student;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -70,8 +72,16 @@ namespace ProjectFinder.Services
                         ProjectDescription = entity.ProjectDescription,
                         CreatedUtc = entity.StartDate,
                         ModfiedUtc = entity.EndDate,
-                        Students = (IEnumerable<Models.Student.StudentListItem>)entity.Students,
-                        Courses = (IEnumerable<Models.Course.CourseList>)entity.Courses
+                        Students = entity.Students.Select(x => new StudentDetail
+                        {
+                            StudentId = x.StudentId,
+                            Name = x.FirstName + " " + x.LastName
+                        }).ToList(),
+                        Courses = entity.Courses.Select(x => new CourseDetail
+                        {
+                            CourseId = x.CourseId,
+
+                        }).ToList()
                     };
             }
         }

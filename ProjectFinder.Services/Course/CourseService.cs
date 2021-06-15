@@ -1,6 +1,7 @@
 ﻿using EFA_Project_Finder.Data;
 using ProjectFinder.Data;
 using ProjectFinder.Models.Course;
+using ProjectFinder.Models.Student;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,7 +57,7 @@ namespace ProjectFinder.Services
             }
         }
 
-        public Course GetCourseById(int id)
+        public CourseDetail GetCourseById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -65,12 +66,16 @@ namespace ProjectFinder.Services
                     .Courses
                     .Single(e => e.CourseId == id);
                 return
-                    new Course
+                    new CourseDetail
                     {
                         CourseId = entity.CourseId,
                         Cohort = entity.Cohort,
                         CourseType = entity.CourseType,
-                        Students = entity.Students,
+                        Students = entity.Students.Select(x => new StudentDetail
+                        {
+                            StudentId = x.StudentId,
+                            Name = x.FirstName + " " + x.LastName
+                        }).ToList(),
                         StartDate = entity.StartDate,
                         EndDate = entity.EndDate
                     };

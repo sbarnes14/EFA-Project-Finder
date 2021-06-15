@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectFinder.Models.Course;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace ProjectFinder.Models.Student
         public string GithubProfile { get; set; }
         public DateTimeOffset EnrollDate { get; set; }
         public int CourseId { get; set; }
+        public virtual CourseDetail Course { get; set; }
         public virtual IEnumerable<ProjectListItem> Projects { get; set; }
     }
 }
