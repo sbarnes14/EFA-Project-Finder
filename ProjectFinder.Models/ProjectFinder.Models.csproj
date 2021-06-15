@@ -89,6 +89,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student\StudentCreate.cs" />
     <Compile Include="Student\StudentDetail.cs" />
+    <Compile Include="Student\StudentEdit.cs" />
     <Compile Include="Student\StudentListItem.cs" />
   </ItemGroup>
   <ItemGroup>

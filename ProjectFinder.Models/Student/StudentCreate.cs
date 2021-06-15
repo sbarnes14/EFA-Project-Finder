@@ -11,8 +11,8 @@ namespace ProjectFinder.Models
     public class StudentCreate
     {
         //maybe dont need SID in this class?
-        //[Required]
-        //public int StudentId { get; set; }
+        [Key]
+        public int StudentId { get; set; }
 
         [Required]
         public string FirstName { get; set; }

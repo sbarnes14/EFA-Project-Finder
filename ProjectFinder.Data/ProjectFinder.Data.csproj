@@ -106,8 +106,9 @@
       <DependentUpon>202106091428578_Comented out Github Repo temporarily.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202106101642402_AddedStudent.cs" />
-    <Compile Include="Migrations\202106101642402_AddedStudent.designer.cs">
-      <DependentUpon>202106101642402_AddedStudent.cs</DependentUpon>
+	  <Compile Include="Migrations\202106101642402_AddedStudent.designer.cs" >
+		  <DependentUpon>202106101642402_AddedStudent.cs</DependentUpon>
+	  </Compile>
     <Compile Include="Migrations\202106091903200_Added Course and Student Branches.cs" />
     <Compile Include="Migrations\202106091903200_Added Course and Student Branches.designer.cs">
       <DependentUpon>202106091903200_Added Course and Student Branches.cs</DependentUpon>
@@ -156,7 +157,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106101642402_AddedStudent.resx">
       <DependentUpon>202106101642402_AddedStudent.cs</DependentUpon>
-    <EmbeddedResource Include="Migrations\202106091903200_Added Course and Student Branches.resx">
+    </EmbeddedResource>
+		<EmbeddedResource Include="Migrations\202106091903200_Added Course and Student Branches.resx">
       <DependentUpon>202106091903200_Added Course and Student Branches.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106101717460_Commenting lines for testing.resx">
