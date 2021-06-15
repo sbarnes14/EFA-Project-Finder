@@ -26,21 +26,20 @@ namespace ProjectFinder.Data
         [Required]
         public string ProjectDescription { get; set; }
 
-        //[Required]
-        //public int Student { get; set; }
-
-        //[Required]
-        //public int CourseId { get; set; }
-
-        //[Required]
-        //public string GitHubRepo { get; set; }
-
         [Required]
         public DateTimeOffset StartDate { get; set; }
         public DateTimeOffset EndDate { get; set; }
 
-        //public IEnumerable<Student> Students { get; set; }
+        public IEnumerable<Student> Students { get; set; }
 
-        //public IEnumerable<Course> Courses { get; set; }
+        public IEnumerable<Course> Courses { get; set; }
+
+        [ForeignKey("Student")]
+        public int StudentId { get; set; }
+        public virtual Student Student { get; set; }
+
+        [ForeignKey("Course")]
+        public int CourseId { get; set; }
+        public virtual Course Course { get; set; }
     }
 }
