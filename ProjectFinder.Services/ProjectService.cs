@@ -69,7 +69,9 @@ namespace ProjectFinder.Services
                         ProjectName = entity.ProjectName,
                         ProjectDescription = entity.ProjectDescription,
                         CreatedUtc = entity.StartDate,
-                        ModfiedUtc = entity.EndDate
+                        ModfiedUtc = entity.EndDate,
+                        Students = (IEnumerable<Models.Student.StudentListItem>)entity.Students,
+                        Courses = (IEnumerable<Models.Course.CourseList>)entity.Courses
                     };
             }
         }
