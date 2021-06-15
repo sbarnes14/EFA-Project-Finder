@@ -117,6 +117,10 @@
     <Compile Include="Migrations\202106151300397_test.designer.cs">
       <DependentUpon>202106151300397_test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106151712364_foreign keys.cs" />
+    <Compile Include="Migrations\202106151712364_foreign keys.designer.cs">
+      <DependentUpon>202106151712364_foreign keys.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -147,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106151300397_test.resx">
       <DependentUpon>202106151300397_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106151712364_foreign keys.resx">
+      <DependentUpon>202106151712364_foreign keys.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -28,6 +28,7 @@ namespace ProjectFinder.Services
                     StudentId = model.StudentId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
+                    CourseId = model.CourseId,
                     EnrollDate = DateTime.UtcNow
                 };
 
@@ -45,7 +46,6 @@ namespace ProjectFinder.Services
                 var query =
                     ctx
                         .Students
-                        //.Where(e => e.StudentId == _userId)//not sure of this
                         .Select(
                             e =>
                                 new StudentListItem
@@ -73,6 +73,7 @@ namespace ProjectFinder.Services
                                     StudentId = query.StudentId,
                                     Name = query.FirstName + " " + query.LastName,
                                     GithubProfile = query.GithubProfile,
+                                    CourseId = query.CourseId,
                                     EnrollDate = query.EnrollDate,
                                     Projects = (IEnumerable<Models.ProjectListItem>)query.Projects
                                 };                  
@@ -91,6 +92,7 @@ namespace ProjectFinder.Services
                 original.StudentId = model.StudentId;
                 original.FirstName = model.FirstName;
                 original.LastName = model.LastName;
+                original.CourseId = model.CourseId;
                 original.GithubProfile = model.GithubProfile;
                 original.EnrollDate = original.EnrollDate;
                 original.Projects = (IEnumerable<Project>)model.Projects;                

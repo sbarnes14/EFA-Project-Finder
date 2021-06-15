@@ -14,6 +14,7 @@ namespace ProjectFinder.Models
         [Required]
         public string LastName { get; set; }
 
-
+        [Required]
+        public int CourseId { get; set; }
     }
 }
