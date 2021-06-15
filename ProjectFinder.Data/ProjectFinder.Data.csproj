@@ -130,8 +130,9 @@
       <DependentUpon>202106101754513_Edit StudentListItem In get students.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202106141412521_idk, just trying to fix an error...cs" />
-    <Compile Include="Migrations\202106141412521_idk, just trying to fix an error...designer.cs">
+	  <Compile Include="Migrations\202106141412521_idk, just trying to fix an error...designer.cs">
       <DependentUpon>202106141412521_idk, just trying to fix an error...cs</DependentUpon>
+	  </Compile>
     <Compile Include="Migrations\202106102059146_Comment test.cs" />
     <Compile Include="Migrations\202106102059146_Comment test.designer.cs">
       <DependentUpon>202106102059146_Comment test.cs</DependentUpon>
@@ -180,8 +181,9 @@
     <EmbeddedResource Include="Migrations\202106101754513_Edit StudentListItem In get students.resx">
       <DependentUpon>202106101754513_Edit StudentListItem In get students.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106141412521_idk, just trying to fix an error...resx">
-      <DependentUpon>202106141412521_idk, just trying to fix an error...cs</DependentUpon>
+	  <EmbeddedResource Include="Migrations\202106141412521_idk, just trying to fix an error...resx">
+		  <DependentUpon>202106141412521_idk, just trying to fix an error...cs</DependentUpon>
+	  </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106102059146_Comment test.resx">
       <DependentUpon>202106102059146_Comment test.cs</DependentUpon>
     </EmbeddedResource>
