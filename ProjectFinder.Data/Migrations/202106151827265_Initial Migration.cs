@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initialmigration : DbMigration
+    public partial class InitialMigration : DbMigration
     {
         public override void Up()
         {
@@ -30,29 +30,8 @@
                         ProjectDescription = c.String(nullable: false),
                         StartDate = c.DateTimeOffset(nullable: false, precision: 7),
                         EndDate = c.DateTimeOffset(nullable: false, precision: 7),
-                        StudentId = c.Int(nullable: false),
-                        CourseId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.ProjectId)
-                .ForeignKey("dbo.Course", t => t.CourseId, cascadeDelete: true)
-                .ForeignKey("dbo.Student", t => t.StudentId, cascadeDelete: true)
-                .Index(t => t.StudentId)
-                .Index(t => t.CourseId);
-            
-            CreateTable(
-                "dbo.Student",
-                c => new
-                    {
-                        StudentId = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(nullable: false),
-                        LastName = c.String(nullable: false),
-                        CourseId = c.Int(nullable: false),
-                        GithubProfile = c.String(),
-                        EnrollDate = c.DateTime(nullable: false),
-                    })
-                .PrimaryKey(t => t.StudentId)
-                .ForeignKey("dbo.Course", t => t.CourseId, cascadeDelete: true)
-                .Index(t => t.CourseId);
+                .PrimaryKey(t => t.ProjectId);
             
             CreateTable(
                 "dbo.IdentityRole",
@@ -77,6 +56,21 @@
                 .ForeignKey("dbo.ApplicationUser", t => t.ApplicationUser_Id)
                 .Index(t => t.IdentityRole_Id)
                 .Index(t => t.ApplicationUser_Id);
+            
+            CreateTable(
+                "dbo.Student",
+                c => new
+                    {
+                        StudentId = c.Int(nullable: false, identity: true),
+                        FirstName = c.String(nullable: false),
+                        LastName = c.String(nullable: false),
+                        CourseId = c.Int(nullable: false),
+                        GithubProfile = c.String(),
+                        EnrollDate = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.StudentId)
+                .ForeignKey("dbo.Course", t => t.CourseId, cascadeDelete: true)
+                .Index(t => t.CourseId);
             
             CreateTable(
                 "dbo.ApplicationUser",
@@ -131,23 +125,19 @@
             DropForeignKey("dbo.IdentityUserRole", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserLogin", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
-            DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
-            DropForeignKey("dbo.Project", "StudentId", "dbo.Student");
             DropForeignKey("dbo.Student", "CourseId", "dbo.Course");
-            DropForeignKey("dbo.Project", "CourseId", "dbo.Course");
+            DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
+            DropIndex("dbo.Student", new[] { "CourseId" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
-            DropIndex("dbo.Student", new[] { "CourseId" });
-            DropIndex("dbo.Project", new[] { "CourseId" });
-            DropIndex("dbo.Project", new[] { "StudentId" });
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
             DropTable("dbo.ApplicationUser");
+            DropTable("dbo.Student");
             DropTable("dbo.IdentityUserRole");
             DropTable("dbo.IdentityRole");
-            DropTable("dbo.Student");
             DropTable("dbo.Project");
             DropTable("dbo.Course");
         }
