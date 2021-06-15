@@ -16,6 +16,8 @@ namespace ProjectFinder.Models
 
         [MaxLength(10000)]
         public string ProjectDescription { get; set; }
+        public int CourseId { get; set; }
+        public int StudentId { get; set; }
 
     }
 }

@@ -29,7 +29,9 @@ namespace ProjectFinder.Services
                     ProjectName = model.Projectname,
                     ProjectDescription = model.ProjectDescription,
                     StartDate = DateTimeOffset.Now,
-                    EndDate = DateTimeOffset.Now
+                    EndDate = DateTimeOffset.Now,
+                    CourseId = model.CourseId,
+                    StudentId = model.StudentId
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -80,6 +82,7 @@ namespace ProjectFinder.Services
                         Courses = entity.Courses.Select(x => new CourseDetail
                         {
                             CourseId = x.CourseId,
+                            CourseType = x.CourseType
 
                         }).ToList()
                     };
