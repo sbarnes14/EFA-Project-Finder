@@ -1,12 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
-using ProjectFinder.Data;
 using ProjectFinder.Models.Course;
 using ProjectFinder.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace EFA_Projecr_Finder.Controllers
@@ -60,6 +55,15 @@ namespace EFA_Projecr_Finder.Controllers
 
             return Ok();
         }
-    }
 
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateCourseService();
+
+            if (!service.DeleteCourse(id))
+                return InternalServerError();
+
+            return Ok();
+        }
+    }
 }
