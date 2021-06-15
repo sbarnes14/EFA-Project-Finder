@@ -106,39 +106,16 @@
       <DependentUpon>202106091428578_Comented out Github Repo temporarily.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202106101642402_AddedStudent.cs" />
-	  <Compile Include="Migrations\202106101642402_AddedStudent.designer.cs" >
-		  <DependentUpon>202106101642402_AddedStudent.cs</DependentUpon>
-	  </Compile>
-    <Compile Include="Migrations\202106091903200_Added Course and Student Branches.cs" />
-    <Compile Include="Migrations\202106091903200_Added Course and Student Branches.designer.cs">
-      <DependentUpon>202106091903200_Added Course and Student Branches.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106101717460_Commenting lines for testing.cs" />
-    <Compile Include="Migrations\202106101717460_Commenting lines for testing.designer.cs">
-      <DependentUpon>202106101717460_Commenting lines for testing.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106101730040_ Change Datetime offset to datetime.cs" />
-    <Compile Include="Migrations\202106101730040_ Change Datetime offset to datetime.designer.cs">
-      <DependentUpon>202106101730040_ Change Datetime offset to datetime.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106101738493_Made enrolldate not required.cs" />
-    <Compile Include="Migrations\202106101738493_Made enrolldate not required.designer.cs">
-      <DependentUpon>202106101738493_Made enrolldate not required.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106101754513_Edit StudentListItem In get students.cs" />
-    <Compile Include="Migrations\202106101754513_Edit StudentListItem In get students.designer.cs">
-      <DependentUpon>202106101754513_Edit StudentListItem In get students.cs</DependentUpon>
+    <Compile Include="Migrations\202106101642402_AddedStudent.designer.cs">
+      <DependentUpon>202106101642402_AddedStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202106141412521_idk, just trying to fix an error...cs" />
     <Compile Include="Migrations\202106141412521_idk, just trying to fix an error...designer.cs">
       <DependentUpon>202106141412521_idk, just trying to fix an error...cs</DependentUpon>
-    <Compile Include="Migrations\202106102059146_Comment test.cs" />
-    <Compile Include="Migrations\202106102059146_Comment test.designer.cs">
-      <DependentUpon>202106102059146_Comment test.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202106102102247_Remove OwnerId.cs" />
-    <Compile Include="Migrations\202106102102247_Remove OwnerId.designer.cs">
-      <DependentUpon>202106102102247_Remove OwnerId.cs</DependentUpon>
+    <Compile Include="Migrations\202106151300397_test.cs" />
+    <Compile Include="Migrations\202106151300397_test.designer.cs">
+      <DependentUpon>202106151300397_test.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Project.cs" />
@@ -165,28 +142,11 @@
     <EmbeddedResource Include="Migrations\202106101642402_AddedStudent.resx">
       <DependentUpon>202106101642402_AddedStudent.cs</DependentUpon>
     </EmbeddedResource>
-		<EmbeddedResource Include="Migrations\202106091903200_Added Course and Student Branches.resx">
-      <DependentUpon>202106091903200_Added Course and Student Branches.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106101717460_Commenting lines for testing.resx">
-      <DependentUpon>202106101717460_Commenting lines for testing.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106101730040_ Change Datetime offset to datetime.resx">
-      <DependentUpon>202106101730040_ Change Datetime offset to datetime.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106101738493_Made enrolldate not required.resx">
-      <DependentUpon>202106101738493_Made enrolldate not required.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106101754513_Edit StudentListItem In get students.resx">
-      <DependentUpon>202106101754513_Edit StudentListItem In get students.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106141412521_idk, just trying to fix an error...resx">
       <DependentUpon>202106141412521_idk, just trying to fix an error...cs</DependentUpon>
-    <EmbeddedResource Include="Migrations\202106102059146_Comment test.resx">
-      <DependentUpon>202106102059146_Comment test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106102102247_Remove OwnerId.resx">
-      <DependentUpon>202106102102247_Remove OwnerId.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106151300397_test.resx">
+      <DependentUpon>202106151300397_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
