@@ -19,12 +19,12 @@ namespace ProjectFinder.Data
         public string LastName { get; set; }
 
         //[Required]
-        //public string GithubProfile { get; set; }
+        public string GithubProfile { get; set; }
 
         //[Required]
         public DateTime EnrollDate { get; set; }
 
-        //public virtual List<Project> Projects { get; set; }
+        public virtual IEnumerable<Project> Projects { get; set; }
 
 
 

@@ -106,9 +106,9 @@
       <DependentUpon>202106091428578_Comented out Github Repo temporarily.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202106101642402_AddedStudent.cs" />
-    <Compile Include="Migrations\202106101642402_AddedStudent.designer.cs">
-      <DependentUpon>202106101642402_AddedStudent.cs</DependentUpon>
-    </Compile>
+	  <Compile Include="Migrations\202106101642402_AddedStudent.designer.cs" >
+		  <DependentUpon>202106101642402_AddedStudent.cs</DependentUpon>
+	  </Compile>
     <Compile Include="Migrations\202106091903200_Added Course and Student Branches.cs" />
     <Compile Include="Migrations\202106091903200_Added Course and Student Branches.designer.cs">
       <DependentUpon>202106091903200_Added Course and Student Branches.cs</DependentUpon>
@@ -129,6 +129,9 @@
     <Compile Include="Migrations\202106101754513_Edit StudentListItem In get students.designer.cs">
       <DependentUpon>202106101754513_Edit StudentListItem In get students.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106141412521_idk, just trying to fix an error...cs" />
+    <Compile Include="Migrations\202106141412521_idk, just trying to fix an error...designer.cs">
+      <DependentUpon>202106141412521_idk, just trying to fix an error...cs</DependentUpon>
     <Compile Include="Migrations\202106102059146_Comment test.cs" />
     <Compile Include="Migrations\202106102059146_Comment test.designer.cs">
       <DependentUpon>202106102059146_Comment test.cs</DependentUpon>
@@ -162,7 +165,7 @@
     <EmbeddedResource Include="Migrations\202106101642402_AddedStudent.resx">
       <DependentUpon>202106101642402_AddedStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106091903200_Added Course and Student Branches.resx">
+		<EmbeddedResource Include="Migrations\202106091903200_Added Course and Student Branches.resx">
       <DependentUpon>202106091903200_Added Course and Student Branches.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106101717460_Commenting lines for testing.resx">
@@ -177,6 +180,8 @@
     <EmbeddedResource Include="Migrations\202106101754513_Edit StudentListItem In get students.resx">
       <DependentUpon>202106101754513_Edit StudentListItem In get students.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106141412521_idk, just trying to fix an error...resx">
+      <DependentUpon>202106141412521_idk, just trying to fix an error...cs</DependentUpon>
     <EmbeddedResource Include="Migrations\202106102059146_Comment test.resx">
       <DependentUpon>202106102059146_Comment test.cs</DependentUpon>
     </EmbeddedResource>

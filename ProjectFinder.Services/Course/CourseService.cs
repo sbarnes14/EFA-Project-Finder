@@ -84,12 +84,27 @@ namespace ProjectFinder.Services
                 var entity =
                     ctx
                     .Courses
-                    .Single(e => e.CourseId == model.CourseId);
+                    .Single(e => e.CourseId == model.CourseId); // Removed UserId bc it breaks
 
                 entity.Cohort = model.Cohort;
                 entity.CourseType = model.CourseType;
                 entity.StartDate = model.StartDate;
                 entity.EndDate = model.EndDate;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteCourse(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Courses
+                    .Single(e => e.CourseId == id);
+
+                ctx.Courses.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
             }

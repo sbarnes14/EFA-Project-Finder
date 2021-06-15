@@ -59,5 +59,60 @@ namespace ProjectFinder.Services
                 return query.ToArray();
             }
         }
+
+        public StudentDetail GetStudentById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Students
+                        .Single(e => e.StudentId == id);
+                return
+                                new StudentDetail
+                                {
+                                    StudentId = query.StudentId,
+                                    FirstName = query.FirstName,
+                                    LastName = query.LastName,
+                                    GithubProfile = query.GithubProfile,
+                                    EnrollDate = query.EnrollDate,
+                                    Projects = (IEnumerable<Models.ProjectListItem>)query.Projects
+                                };                  
+            }
+        }
+
+        public bool UpdateStudent(StudentEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var original =
+                    ctx
+                    .Students
+                    .Single(e => e.StudentId == model.StudentId);
+
+                original.StudentId = model.StudentId;
+                original.FirstName = model.FirstName;
+                original.LastName = model.LastName;
+                original.GithubProfile = model.GithubProfile;
+                original.EnrollDate = original.EnrollDate;
+                original.Projects = (IEnumerable<Project>)model.Projects;                
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteStudent(int studentId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Students
+                        .Single(e => e.StudentId == studentId);
+                ctx.Students.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
