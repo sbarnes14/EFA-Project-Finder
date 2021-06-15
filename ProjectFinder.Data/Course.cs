@@ -22,14 +22,12 @@ namespace ProjectFinder.Data
         [Required]
         public Guid OwnerId { get; set; }
         [Required]
-        [Display(Name ="Cohort")] // redundant because same name
+        [Display(Name = "Cohort")] // redundant because same name
         public string Cohort { get; set; }
         [Required]
         [Display(Name = "Course Type")]
         public CourseType CourseType { get; set; }
-
-        [Display(Name ="Students")] // redundant because same name
-        public virtual IEnumerable<Student> Students { get; set; } // many-to-one ref from Student Class - not implemented as of yet ~Jay
+        public virtual IEnumerable<Student> Students { get; set; }
         [Display(Name ="Start Date [UTC]")]
         public DateTimeOffset StartDate { get; set; }
         [Display(Name ="End Date [UTC]")]

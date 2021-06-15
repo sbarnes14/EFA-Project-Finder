@@ -1,5 +1,4 @@
 ﻿using ProjectFinder.Data;
-using ProjectFinder.Models.Student;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -9,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace ProjectFinder.Models.Course
 {
+    // This whole class is not currently being used bc line 17 throws error bc Student is also a namespace in ProjectFinder.Models - Opted to use Course in Service for GET Method
     public class CourseDetail
     {
         public int CourseId { get; set; }
         public string Cohort { get; set; }
         public CourseType CourseType { get; set; }
-        [Display(Name = "Students")] // redundant because same name
-        public virtual IEnumerable<StudentListItem> Students { get; set; } // many-to-one ref from Student Class - not implemented as of yet ~Jay
+        //public virtual IEnumerable<Student> Students { get; set; }
         [Display(Name = "Start Date [UTC]")]
         public DateTimeOffset StartDate { get; set; }
         [Display(Name = "End Date [UTC]")]

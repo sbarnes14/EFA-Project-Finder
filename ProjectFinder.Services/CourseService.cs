@@ -42,7 +42,7 @@ namespace ProjectFinder.Services
                 var query =
                     ctx
                     .Courses
-                    //.Where(e => e.OwnerId == _userId) // OwnerId here?
+                    //.Where(e => e.OwnerId == _userId) // OwnerId here? Throws Auth errors so dropped - still requires auth from projects
                     .Select(
                         e =>
                         new CourseList
@@ -56,7 +56,7 @@ namespace ProjectFinder.Services
             }
         }
 
-        public CourseDetail GetCourseById(int id)
+        public Course GetCourseById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -65,12 +65,12 @@ namespace ProjectFinder.Services
                     .Courses
                     .Single(e => e.CourseId == id);
                 return
-                    new CourseDetail
+                    new Course
                     {
                         CourseId = entity.CourseId,
                         Cohort = entity.Cohort,
                         CourseType = entity.CourseType,
-                        Students = (IEnumerable<Models.Student.StudentListItem>)entity.Students,
+                        Students = entity.Students,
                         StartDate = entity.StartDate,
                         EndDate = entity.EndDate
                     };
@@ -84,11 +84,10 @@ namespace ProjectFinder.Services
                 var entity =
                     ctx
                     .Courses
-                    .Single(e => e.CourseId == model.CourseId && e.OwnerId == _userId);
+                    .Single(e => e.CourseId == model.CourseId);
 
                 entity.Cohort = model.Cohort;
                 entity.CourseType = model.CourseType;
-                entity.Students = (IEnumerable<Student>)model.Students;
                 entity.StartDate = model.StartDate;
                 entity.EndDate = model.EndDate;
 
