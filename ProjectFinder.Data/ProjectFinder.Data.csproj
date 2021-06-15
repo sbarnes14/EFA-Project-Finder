@@ -89,41 +89,9 @@
   <ItemGroup>
     <Compile Include="Course.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202106081418447_InitialCreate.cs" />
-    <Compile Include="Migrations\202106081418447_InitialCreate.Designer.cs">
-      <DependentUpon>202106081418447_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106091407155_Initial migraion.cs" />
-    <Compile Include="Migrations\202106091407155_Initial migraion.Designer.cs">
-      <DependentUpon>202106091407155_Initial migraion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106091423442_Commented course and student temporarily.cs" />
-    <Compile Include="Migrations\202106091423442_Commented course and student temporarily.Designer.cs">
-      <DependentUpon>202106091423442_Commented course and student temporarily.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106091428578_Comented out Github Repo temporarily.cs" />
-    <Compile Include="Migrations\202106091428578_Comented out Github Repo temporarily.Designer.cs">
-      <DependentUpon>202106091428578_Comented out Github Repo temporarily.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106101642402_AddedStudent.cs" />
-    <Compile Include="Migrations\202106101642402_AddedStudent.designer.cs">
-      <DependentUpon>202106101642402_AddedStudent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106141412521_idk, just trying to fix an error...cs" />
-	  <Compile Include="Migrations\202106141412521_idk, just trying to fix an error...designer.cs">
-      <DependentUpon>202106141412521_idk, just trying to fix an error...cs</DependentUpon>
-	  </Compile>
-    <Compile Include="Migrations\202106102059146_Comment test.cs" />
-    <Compile Include="Migrations\202106102059146_Comment test.designer.cs">
-      <DependentUpon>202106102059146_Comment test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106151300397_test.cs" />
-    <Compile Include="Migrations\202106151300397_test.designer.cs">
-      <DependentUpon>202106151300397_test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106151712364_foreign keys.cs" />
-    <Compile Include="Migrations\202106151712364_foreign keys.designer.cs">
-      <DependentUpon>202106151712364_foreign keys.cs</DependentUpon>
+    <Compile Include="Migrations\202106151755033_initial migration.cs" />
+    <Compile Include="Migrations\202106151755033_initial migration.designer.cs">
+      <DependentUpon>202106151755033_initial migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Project.cs" />
@@ -135,50 +103,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202106081418447_InitialCreate.resx">
-      <DependentUpon>202106081418447_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106091407155_Initial migraion.resx">
-      <DependentUpon>202106091407155_Initial migraion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106091423442_Commented course and student temporarily.resx">
-      <DependentUpon>202106091423442_Commented course and student temporarily.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106091428578_Comented out Github Repo temporarily.resx">
-      <DependentUpon>202106091428578_Comented out Github Repo temporarily.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106101642402_AddedStudent.resx">
-      <DependentUpon>202106101642402_AddedStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106141412521_idk, just trying to fix an error...resx">
-      <DependentUpon>202106141412521_idk, just trying to fix an error...cs</DependentUpon>
-    </EmbeddedResource>
-		<EmbeddedResource Include="Migrations\202106091903200_Added Course and Student Branches.resx">
-      <DependentUpon>202106091903200_Added Course and Student Branches.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106101717460_Commenting lines for testing.resx">
-      <DependentUpon>202106101717460_Commenting lines for testing.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106101730040_ Change Datetime offset to datetime.resx">
-      <DependentUpon>202106101730040_ Change Datetime offset to datetime.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106101738493_Made enrolldate not required.resx">
-      <DependentUpon>202106101738493_Made enrolldate not required.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106101754513_Edit StudentListItem In get students.resx">
-      <DependentUpon>202106101754513_Edit StudentListItem In get students.cs</DependentUpon>
-    </EmbeddedResource>
-	  <EmbeddedResource Include="Migrations\202106141412521_idk, just trying to fix an error...resx">
-		  <DependentUpon>202106141412521_idk, just trying to fix an error...cs</DependentUpon>
-	  </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106102059146_Comment test.resx">
-      <DependentUpon>202106102059146_Comment test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106151300397_test.resx">
-      <DependentUpon>202106151300397_test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106151712364_foreign keys.resx">
-      <DependentUpon>202106151712364_foreign keys.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106151755033_initial migration.resx">
+      <DependentUpon>202106151755033_initial migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
