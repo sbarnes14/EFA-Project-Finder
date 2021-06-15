@@ -42,7 +42,7 @@ namespace ProjectFinder.Services
                 var query =
                     ctx
                     .Courses
-                    .Where(e => e.OwnerId == _userId) // OwnerId here?
+                    //.Where(e => e.OwnerId == _userId) // OwnerId here?
                     .Select(
                         e =>
                         new CourseList
@@ -63,7 +63,7 @@ namespace ProjectFinder.Services
                 var entity =
                     ctx
                     .Courses
-                    .Single(e => e.CourseId == id && e.OwnerId == _userId);
+                    .Single(e => e.CourseId == id);
                 return
                     new CourseDetail
                     {
