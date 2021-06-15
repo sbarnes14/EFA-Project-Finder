@@ -16,23 +16,14 @@ namespace EFA_Projecr_Finder.Controllers
     {
         private StudentService _studentService = new StudentService();
 
-        //private StudentService CreateStudentService()
-        //{
-        //    int studentId = User.Identity.GetStudentId);
-        //    var studentService = new StudentService(studentId);
-        //    return studentService;
-        //}
-
         public IHttpActionResult Get()
         {
-            //StudentService studentService = CreateStudentService();
             var students = _studentService.GetStudents();
             return Ok(students);
         }
 
         public IHttpActionResult Get(int id)
         {
-            //StudentService studentService = CreateStudentService();
             var student = _studentService.GetStudentById(id);
             return Ok(student);
         }
@@ -41,8 +32,6 @@ namespace EFA_Projecr_Finder.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-
-            //var service = CreateStudentService();
 
             if (!_studentService.CreateStudent(student))
                 return InternalServerError();

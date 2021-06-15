@@ -51,8 +51,7 @@ namespace ProjectFinder.Services
                                 new StudentListItem
                                 {
                                     StudentId = e.StudentId,
-                                    FirstName = e.FirstName,
-                                    LastName = e.LastName,
+                                    Name = e.FirstName + " " + e.LastName,
                                     EnrollDate = e.EnrollDate
                                 }
                         );
@@ -72,8 +71,7 @@ namespace ProjectFinder.Services
                                 new StudentDetail
                                 {
                                     StudentId = query.StudentId,
-                                    FirstName = query.FirstName,
-                                    LastName = query.LastName,
+                                    Name = query.FirstName + " " + query.LastName,
                                     GithubProfile = query.GithubProfile,
                                     EnrollDate = query.EnrollDate,
                                     Projects = (IEnumerable<Models.ProjectListItem>)query.Projects
