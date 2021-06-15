@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using ProjectFinder.Models;
+using ProjectFinder.Models.Student;
 using ProjectFinder.Services;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,13 @@ namespace EFA_Projecr_Finder.Controllers
             return Ok(students);
         }
 
+        public IHttpActionResult Get(int id)
+        {
+            //StudentService studentService = CreateStudentService();
+            var student = _studentService.GetStudentById(id);
+            return Ok(student);
+        }
+
         public IHttpActionResult Post(StudentCreate student)
         {
             if (!ModelState.IsValid)
@@ -37,6 +45,25 @@ namespace EFA_Projecr_Finder.Controllers
             //var service = CreateStudentService();
 
             if (!_studentService.CreateStudent(student))
+                return InternalServerError();
+
+            return Ok();
+        }
+
+        public IHttpActionResult Put(StudentEdit student)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (!_studentService.UpdateStudent(student))
+                return InternalServerError();
+
+            return Ok();
+        }
+        public IHttpActionResult Delete(int id)
+        {
+
+            if (!_studentService.DeleteStudent(id))
                 return InternalServerError();
 
             return Ok();

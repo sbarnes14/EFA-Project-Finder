@@ -27,10 +27,10 @@ namespace ProjectFinder.Data
         public string ProjectDescription { get; set; }
 
         //[Required]
-        //public virtual int Student { get; set; }
+        //public int Student { get; set; }
 
         //[Required]
-        //public virtual int CourseId { get; set; }
+        //public int CourseId { get; set; }
 
         //[Required]
         //public string GitHubRepo { get; set; }
@@ -39,8 +39,8 @@ namespace ProjectFinder.Data
         public DateTimeOffset StartDate { get; set; }
         public DateTimeOffset EndDate { get; set; }
 
-        public IEnumerable<Student> Students { get; set; }
+        //public IEnumerable<Student> Students { get; set; }
 
-        public IEnumerable<Course> Courses { get; set; }
+        //public IEnumerable<Course> Courses { get; set; }
     }
 }
