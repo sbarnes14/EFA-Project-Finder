@@ -1,10 +1,4 @@
-﻿using EFA_Project_Finder.Data;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ProjectFinder.Models
 {
@@ -19,5 +13,8 @@ namespace ProjectFinder.Models
 
         [Required]
         public string LastName { get; set; }
+
+        [Required]
+        public int CourseId { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,14 +19,16 @@ namespace ProjectFinder.Data
         [Required]
         public string LastName { get; set; }
 
-        //[Required]
+        [Required]
+        [ForeignKey("Course")]
+        public int CourseId { get; set; }
+        public virtual Course Course { get; set; }
+
         public string GithubProfile { get; set; }
 
-        //[Required]
-        public DateTime EnrollDate { get; set; }
+        public DateTime EnrollDate { get; set; } 
 
         public virtual IEnumerable<Project> Projects { get; set; }
-
 
 
         //[Required]
@@ -33,9 +36,5 @@ namespace ProjectFinder.Data
 
         //[ForeignKey("Project")]
         //public virtual Project Project { get; set; }
-
-        //[ForeignKey("Course")]
-        //public int CourseId { get; set; }
-        //public virtual Course Course { get; set; }
     }
 }
