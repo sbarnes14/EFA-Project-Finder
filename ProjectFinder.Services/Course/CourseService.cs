@@ -48,6 +48,7 @@ namespace ProjectFinder.Services
                         new CourseList
                         {
                             CourseId = e.CourseId,
+                            Cohort = e.Cohort,
                             CourseType = e.CourseType,
                             StartDate = e.StartDate
                         }
