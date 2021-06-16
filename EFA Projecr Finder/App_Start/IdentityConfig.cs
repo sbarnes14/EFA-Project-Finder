@@ -4,6 +4,8 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using EFA_Projecr_Finder.Models;
+using EFA_Project_Finder.Data;
+using EFA_Project_Finder;
 
 namespace EFA_Projecr_Finder
 {
