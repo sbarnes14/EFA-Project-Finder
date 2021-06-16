@@ -89,15 +89,6 @@
   <ItemGroup>
     <Compile Include="Course.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202106152232476_help.cs" />
-    <Compile Include="Migrations\202106152232476_help.designer.cs">
-      <DependentUpon>202106152232476_help.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106152247132_is this it T-T.cs" />
-    <Compile Include="Migrations\202106152247132_is this it T-T.designer.cs">
-      <DependentUpon>202106152247132_is this it T-T.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
@@ -105,14 +96,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202106152232476_help.resx">
-      <DependentUpon>202106152232476_help.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106152247132_is this it T-T.resx">
-      <DependentUpon>202106152247132_is this it T-T.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

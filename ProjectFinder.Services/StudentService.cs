@@ -75,9 +75,8 @@ namespace ProjectFinder.Services
                                     StudentId = query.StudentId,
                                     Name = query.FirstName + " " + query.LastName,
                                     GithubProfile = query.GithubProfile,
-                                    CourseId = query.CourseId,
-                                    EnrollDate = query.EnrollDate,
-                                    //Projects = (IEnumerable<Models.ProjectListItem>)query.Projects
+                                    Course = query.Course.Cohort + " " + query.Course.CourseType,
+                                    EnrollDate = query.EnrollDate
                                 };                  
             }
         }

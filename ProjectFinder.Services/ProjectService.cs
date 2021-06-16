@@ -75,13 +75,11 @@ namespace ProjectFinder.Services
                         Students = entity.Students.Select(x => new StudentDetail
                         {
                             StudentId = x.StudentId,
-                            Name = x.FirstName + " " + x.LastName
-                        }).ToList(),
-                        //Courses = entity.Courses.Select(x => new CourseDetail
-                        //{
-                        //    CourseId = x.CourseId,
-
-                        //}).ToList()
+                            Name = x.FirstName + " " + x.LastName,
+                            GithubProfile = x.GithubProfile,
+                            Course = x.Course.Cohort + " " + x.Course.CourseType,
+                            EnrollDate = x.EnrollDate,
+                        }).ToList(),                        
                     };
             }
         }

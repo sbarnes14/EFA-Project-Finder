@@ -15,7 +15,7 @@ namespace ProjectFinder.Models.Course
         public int CourseId { get; set; }
         public string Cohort { get; set; }
         public CourseType CourseType { get; set; }
-        public virtual IEnumerable<StudentDetail> Students { get; set; }
+        public virtual IEnumerable<StudentListItem> Students { get; set; }
         [Display(Name = "Start Date [UTC]")]
         public DateTimeOffset StartDate { get; set; }
         [Display(Name = "End Date [UTC]")]

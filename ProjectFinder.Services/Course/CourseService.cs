@@ -70,10 +70,11 @@ namespace ProjectFinder.Services
                         CourseId = entity.CourseId,
                         Cohort = entity.Cohort,
                         CourseType = entity.CourseType,
-                        Students = entity.Students.Select(x => new StudentDetail
+                        Students = entity.Students.Select(x => new StudentListItem
                         {
                             StudentId = x.StudentId,
-                            Name = x.FirstName + " " + x.LastName
+                            Name = x.FirstName + " " + x.LastName,
+                            EnrollDate = x.EnrollDate
                         }).ToList(),
                         StartDate = entity.StartDate,
                         EndDate = entity.EndDate
@@ -88,8 +89,9 @@ namespace ProjectFinder.Services
                 var entity =
                     ctx
                     .Courses
-                    .Single(e => e.CourseId == model.CourseId); 
+                    .Single(e => e.CourseId == model.CourseId);
 
+                entity.CourseId = entity.CourseId;
                 entity.Cohort = model.Cohort;
                 entity.CourseType = model.CourseType;
                 entity.StartDate = model.StartDate;
