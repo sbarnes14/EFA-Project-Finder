@@ -12,14 +12,6 @@ namespace ProjectFinder.Services
 {
     public class StudentService
     {
-
-       // private readonly int _userId;
-
-        //public StudentService(int userId)
-        //{
-        //    _userId = userId;
-        //}
-
         public bool CreateStudent(StudentCreate model)
         {
             var entity =

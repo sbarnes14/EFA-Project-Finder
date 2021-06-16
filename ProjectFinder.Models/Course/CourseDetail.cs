@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace ProjectFinder.Models.Course
 {
-    // This whole class is not currently being used bc line 17 throws error bc Student is also a namespace in ProjectFinder.Models - Opted to use Course in Service for GET Method
     public class CourseDetail
     {
         public int CourseId { get; set; }
