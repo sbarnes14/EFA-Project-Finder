@@ -23,7 +23,7 @@ namespace ProjectFinder.Models
 
         public IEnumerable<StudentDetail> Students { get; set; }
 
-        public IEnumerable<CourseDetail> Courses { get; set; }
+        //public IEnumerable<CourseDetail> Courses { get; set; }
 
     }
 }

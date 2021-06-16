@@ -7,13 +7,13 @@ namespace ProjectFinder.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class SecondMigration : IMigrationMetadata
+    public sealed partial class isthisitTT : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(SecondMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(isthisitTT));
         
         string IMigrationMetadata.Id
         {
-            get { return "202106151830562_Second Migration"; }
+            get { return "202106152247132_is this it T-T"; }
         }
         
         string IMigrationMetadata.Source

@@ -43,7 +43,6 @@ namespace ProjectFinder.Services
                 var query =
                     ctx
                     .Courses
-                    //.Where(e => e.OwnerId == _userId) // OwnerId here? Throws Auth errors so dropped - still requires auth from projects
                     .Select(
                         e =>
                         new CourseList
@@ -89,7 +88,7 @@ namespace ProjectFinder.Services
                 var entity =
                     ctx
                     .Courses
-                    .Single(e => e.CourseId == model.CourseId); // Removed UserId bc it breaks
+                    .Single(e => e.CourseId == model.CourseId); 
 
                 entity.Cohort = model.Cohort;
                 entity.CourseType = model.CourseType;

@@ -24,17 +24,14 @@ namespace ProjectFinder.Data
         public int CourseId { get; set; }
         public virtual Course Course { get; set; }
 
+
         public string GithubProfile { get; set; }
 
-        public DateTime EnrollDate { get; set; } 
-
-        public virtual IEnumerable<Project> Projects { get; set; }
+        public DateTime EnrollDate { get; set; }
 
 
-        //[Required]
-        //public int ProjectId { get; set; }
-
-        //[ForeignKey("Project")]
-        //public virtual Project Project { get; set; }
+        [ForeignKey(nameof(Project))]
+        public int ProjectId { get; set; }
+        public virtual Project Project { get; set; }       
     }
 }

@@ -77,11 +77,11 @@ namespace ProjectFinder.Services
                             StudentId = x.StudentId,
                             Name = x.FirstName + " " + x.LastName
                         }).ToList(),
-                        Courses = entity.Courses.Select(x => new CourseDetail
-                        {
-                            CourseId = x.CourseId,
+                        //Courses = entity.Courses.Select(x => new CourseDetail
+                        //{
+                        //    CourseId = x.CourseId,
 
-                        }).ToList()
+                        //}).ToList()
                     };
             }
         }

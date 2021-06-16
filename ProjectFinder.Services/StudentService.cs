@@ -28,7 +28,9 @@ namespace ProjectFinder.Services
                     StudentId = model.StudentId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
+                    GithubProfile = model.GithubProfile,
                     CourseId = model.CourseId,
+                    ProjectId = model.ProjectId,
                     EnrollDate = DateTime.UtcNow
                 };
 
@@ -75,7 +77,7 @@ namespace ProjectFinder.Services
                                     GithubProfile = query.GithubProfile,
                                     CourseId = query.CourseId,
                                     EnrollDate = query.EnrollDate,
-                                    Projects = (IEnumerable<Models.ProjectListItem>)query.Projects
+                                    //Projects = (IEnumerable<Models.ProjectListItem>)query.Projects
                                 };                  
             }
         }
@@ -93,9 +95,9 @@ namespace ProjectFinder.Services
                 original.FirstName = model.FirstName;
                 original.LastName = model.LastName;
                 original.CourseId = model.CourseId;
+                original.ProjectId = model.ProjectId;
                 original.GithubProfile = model.GithubProfile;
-                original.EnrollDate = original.EnrollDate;
-                original.Projects = (IEnumerable<Project>)model.Projects;                
+                original.EnrollDate = original.EnrollDate;                
 
                 return ctx.SaveChanges() == 1;
             }

@@ -7,13 +7,13 @@ namespace ProjectFinder.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class InitialMigration : IMigrationMetadata
+    public sealed partial class help : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(help));
         
         string IMigrationMetadata.Id
         {
-            get { return "202106151827265_Initial Migration"; }
+            get { return "202106152232476_help"; }
         }
         
         string IMigrationMetadata.Source

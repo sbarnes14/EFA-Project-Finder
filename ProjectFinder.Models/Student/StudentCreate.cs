@@ -16,5 +16,8 @@ namespace ProjectFinder.Models
 
         [Required]
         public int CourseId { get; set; }
+
+        public int ProjectId { get; set; }
+        public string GithubProfile { get; set; }
     }
 }

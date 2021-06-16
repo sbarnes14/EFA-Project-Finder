@@ -89,21 +89,13 @@
   <ItemGroup>
     <Compile Include="Course.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202106151827265_Initial Migration.cs" />
-    <Compile Include="Migrations\202106151827265_Initial Migration.designer.cs">
-      <DependentUpon>202106151827265_Initial Migration.cs</DependentUpon>
+    <Compile Include="Migrations\202106152232476_help.cs" />
+    <Compile Include="Migrations\202106152232476_help.designer.cs">
+      <DependentUpon>202106152232476_help.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202106151830562_Second Migration.cs" />
-    <Compile Include="Migrations\202106151830562_Second Migration.designer.cs">
-      <DependentUpon>202106151830562_Second Migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106151844319_Third Migration.cs" />
-    <Compile Include="Migrations\202106151844319_Third Migration.designer.cs">
-      <DependentUpon>202106151844319_Third Migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106152020143_Forthebois.cs" />
-    <Compile Include="Migrations\202106152020143_Forthebois.designer.cs">
-      <DependentUpon>202106152020143_Forthebois.cs</DependentUpon>
+    <Compile Include="Migrations\202106152247132_is this it T-T.cs" />
+    <Compile Include="Migrations\202106152247132_is this it T-T.designer.cs">
+      <DependentUpon>202106152247132_is this it T-T.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Project.cs" />
@@ -115,17 +107,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202106151827265_Initial Migration.resx">
-      <DependentUpon>202106151827265_Initial Migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106152232476_help.resx">
+      <DependentUpon>202106152232476_help.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106151830562_Second Migration.resx">
-      <DependentUpon>202106151830562_Second Migration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106151844319_Third Migration.resx">
-      <DependentUpon>202106151844319_Third Migration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106152020143_Forthebois.resx">
-      <DependentUpon>202106152020143_Forthebois.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106152247132_is this it T-T.resx">
+      <DependentUpon>202106152247132_is this it T-T.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

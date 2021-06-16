@@ -7,13 +7,13 @@ namespace ProjectFinder.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Forthebois : IMigrationMetadata
+    public sealed partial class idkanymore : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Forthebois));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(idkanymore));
         
         string IMigrationMetadata.Id
         {
-            get { return "202106152020143_Forthebois"; }
+            get { return "202106152137107_idk anymore"; }
         }
         
         string IMigrationMetadata.Source

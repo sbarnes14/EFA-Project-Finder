@@ -19,17 +19,22 @@ namespace ProjectFinder.Data
     {
         [Key]
         public int CourseId { get; set; }
+
         [Required]
         public Guid OwnerId { get; set; }
+
         [Required]
-        [Display(Name = "Cohort")] // redundant because same name
+        [Display(Name = "Cohort")] 
         public string Cohort { get; set; }
+
         [Required]
         [Display(Name = "Course Type")]
         public CourseType CourseType { get; set; }
         public virtual ICollection<Student> Students { get; set; }
+
         [Display(Name ="Start Date [UTC]")]
         public DateTimeOffset StartDate { get; set; }
+
         [Display(Name ="End Date [UTC]")]
         public DateTimeOffset EndDate { get; set; }
     }

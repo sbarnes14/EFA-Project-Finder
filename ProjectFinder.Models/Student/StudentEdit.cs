@@ -12,8 +12,9 @@ namespace ProjectFinder.Models.Student
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int CourseId { get; set; }
+        public int ProjectId { get; set; }
         public string GithubProfile { get; set; }
         public DateTimeOffset EnrollDate { get; set; }
-        public virtual IEnumerable<ProjectListItem> Projects { get; set; }
+        //public virtual IEnumerable<ProjectListItem> Projects { get; set; }
     }
 }

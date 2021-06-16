@@ -30,9 +30,9 @@ namespace ProjectFinder.Data
         public DateTimeOffset StartDate { get; set; }
         public DateTimeOffset EndDate { get; set; }
 
-        public ICollection<Student> Students { get; set; }
+        public virtual ICollection<Student> Students { get; set; }
 
-        public ICollection<Course> Courses { get; set; }
+        //public ICollection<Course> Courses { get; set; }
 
         //[ForeignKey("Student")]
         //public int StudentId { get; set; }

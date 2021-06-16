@@ -16,6 +16,6 @@ namespace ProjectFinder.Models.Student
         public DateTimeOffset EnrollDate { get; set; }
         public int CourseId { get; set; }
         public virtual CourseDetail Course { get; set; }
-        public virtual IEnumerable<ProjectListItem> Projects { get; set; }
+        //public virtual IEnumerable<ProjectListItem> Projects { get; set; }
     }
 }
