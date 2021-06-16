@@ -20,7 +20,7 @@ namespace ProjectFinder.Data
         public string LastName { get; set; }
 
         [Required]
-        [ForeignKey(nameof (Course))]
+        [ForeignKey(nameof(Course))]
         public int CourseId { get; set; }
         public virtual Course Course { get; set; }
 
